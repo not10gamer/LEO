@@ -1,2 +1,2 @@
-# CyberNest
-A website for the CyberNest of Ethos International College
+# LEO
+A Website for the LEO club of EIC
