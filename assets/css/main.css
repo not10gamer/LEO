@@ -234,8 +234,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #008374;
-  --heading-color: #ffffff;
+  --background-color: #02545c;
+  --heading-color: #202020;
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
@@ -2855,12 +2855,5 @@ section,
 body {
     background-color: #202020;    /* Sets default background color */
 }
-header {
-    --background-color: #1a1a1a; /* Darker shade */
-    background-color: var(--background-color);
-}
-header .contact-info {
-    background-color: #ffffff;
-    color: #ffffff;
-}
+
 
