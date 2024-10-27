@@ -41,6 +41,8 @@
 
 .light-background {
   --background-color: #121212;
+  --default-color: #ffffff;
+  --heading-color: #02545c;
   --surface-color: #ffffff;
 }
 
