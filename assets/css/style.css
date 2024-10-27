@@ -82,20 +82,23 @@ body {
   justify-content: center;
 }
 
+/* Styling for the gallery item container */
 .gallery-item {
-  width: 15%;
+  width: 3cm; /* Fixed width of 3 cm */
+  height: 3cm; /* Fixed height of 3 cm */
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Ensures the image fits within 3x3 cm container */
 .gallery-item img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ensures the image fully fills the 3 cm container */
+  height: 100%; /* Maintains the 3 cm height */
+  object-fit: cover; /* Crops the image to fit neatly within the square */
   transition: transform 0.3s ease;
 }
-
 .gallery-item:hover img {
   transform: scale(1.05);
 }
@@ -151,20 +154,4 @@ body {
   background-color: #037d8a;
   transform: scale(1.05);
 }
-/* Styling for the gallery item container */
-.gallery-item {
-  width: 3cm; /* Fixed width of 3 cm */
-  height: 3cm; /* Fixed height of 3 cm */
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-/* Ensures the image fits within 3x3 cm container */
-.gallery-item img {
-  width: 100%; /* Ensures the image fully fills the 3 cm container */
-  height: 100%; /* Maintains the 3 cm height */
-  object-fit: cover; /* Crops the image to fit neatly within the square */
-  transition: transform 0.3s ease;
-}
