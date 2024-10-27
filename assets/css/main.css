@@ -43,10 +43,10 @@
   --background-color: #202020;
   --default-color: #ffffff;
   --heading-color: #02545c;
-  --surface-color: #ffffff;
+  --surface-color: #02545c;
 }
-
-.dark-background {
+/*Color preset for home page*/
+.dark-background {            
   --background-color: #202020;
   --default-color: #ffffff;
   --heading-color: #02545c;
