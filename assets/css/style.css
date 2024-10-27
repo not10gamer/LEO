@@ -50,7 +50,7 @@
 /* Overall page styling */
 body {
   background-color: #202020;
-  color: #f0f0f0;
+  color: #202020;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -89,8 +89,8 @@ body {
 
 /* Ensures the image fits within 3x3 cm container */
 .gallery-item img {
-  width: 100%; /* Ensures the image fully fills the 3 cm container */
-  height: 100%; /* Maintains the 3 cm height */
+  width: 25%; /* Ensures the image fully fills the 3 cm container */
+  height: 25%; /* Maintains the 3 cm height */
   object-fit: cover; /* Crops the image to fit neatly within the square */
   transition: transform 0.3s ease;
 }
