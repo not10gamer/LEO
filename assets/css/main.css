@@ -45,11 +45,11 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #121212;
   --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+  --heading-color: #02545c;
+  --surface-color: #2c2c2c;
+  --contrast-color: #02545c;
 }
 
 .accent-background {
