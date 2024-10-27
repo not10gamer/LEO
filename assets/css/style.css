@@ -125,7 +125,7 @@ body {
   position: absolute;
   top: 20px;
   right: 30px;
-  color: #f0f0f0;
+  color: #202020;
   font-size: 30px;
   cursor: pointer;
 }
@@ -138,7 +138,7 @@ body {
 .more-button a {
   padding: 12px 24px;
   font-size: 1.1em;
-  color: #f0f0f0;
+  color: #202020;
   background-color: #02545c;
   text-decoration: none;
   border-radius: 5px;
