@@ -2853,6 +2853,14 @@ section,
   font-size: 14px;
 }
 body {
-    background-color:#202020;    /* Sets default background color */
+    background-color: #202020;    /* Sets default background color */
+}
+header {
+    --background-color: #1a1a1a; /* Darker shade */
+    background-color: var(--background-color);
+}
+header .contact-info {
+    background-color: #333333;
+    color: #ffffff;
 }
 
