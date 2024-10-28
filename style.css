@@ -7,7 +7,8 @@
 }
 
 body {
-    background: #202020;
+    background: #202020; /* Dark gray background */
+    color: #fff; /* Optional: White text for contrast */ 
 }
 
 /* Image Gallery Styling */
