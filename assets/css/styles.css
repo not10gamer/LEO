@@ -1,16 +1,3 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    background: #202020; /* Dark gray background */
-    color: #fff; /* Optional: White text for contrast */ 
-}
-
 /* Image Gallery Styling */
 .image-gallery {
     width: 80%;
