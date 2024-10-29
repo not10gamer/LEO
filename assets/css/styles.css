@@ -1,1 +1,66 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 
+body {
+    background: #202020; /* Dark gray background */
+    color: #fff; /* Optional: White text for contrast */ 
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+    width: 80%;
+    margin: 20px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: rotate(15deg) scale(0.8);
+    border-radius: 20px;
+    box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
+}
+
+/* Full Image View Styling */
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-img img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Close Button Styling */
+.full-img .close-btn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
