@@ -1078,15 +1078,19 @@ section,
 }
 
 .clients .swiper-wrapper {
-  height: auto;
+  height: 100px;
 }
 
 .clients .swiper-slide img {
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .clients .swiper-slide img:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
+}
+
+.clients .swiper-slide img {
+  transform: scale(1.75);
 }
 
 /*--------------------------------------------------------------
