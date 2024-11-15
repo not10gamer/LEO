@@ -46,6 +46,8 @@
   gtag('config', 'G-JVSDT6D3W0');
 </script>
 
+  
+
 <body class="index-page">
 
   <header id="header" class="header fixed-top">
@@ -576,7 +578,14 @@ The LEO Club of EIC organizes community service, workshops, fundraising events, 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <div id="preloader">
+  <img src="path/to/your-image.png" alt="Loading...">
+  </div>
+<div id="content" style="display: none;">
+  <!-- Main page content goes here -->
+  <h1>Welcome to the website!</h1>
+</div>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -590,6 +599,14 @@ The LEO Club of EIC organizes community service, workshops, fundraising events, 
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <!-- Pre-Loader Js File-->
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    });
+  </script>
 
 </body>
 
