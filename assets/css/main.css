@@ -2859,3 +2859,21 @@ section,
 body {
     background-color: #202020;    /* Sets default background color */
 }
+
+#hero {
+  background: url('assets/img/hero-img.jpeg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff; /* Adjust text color for readability */
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+}
