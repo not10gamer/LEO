@@ -71,11 +71,19 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
     color: white;
+}
+
+.back-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 a {
