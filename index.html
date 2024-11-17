@@ -109,16 +109,21 @@
   <main class="main">
 
 <!-- Hero Section -->
-<section id="hero" class="hero section">
+<section id="hero" class="hero section" style="position: relative; overflow: hidden;">
 
   <div class="container position-relative text-center" data-aos="fade-up" data-aos-delay="100">
     <h2 class="hero-title"><span class="accent">LEO CLUB OF EIC</span></h2>
     <p class="hero-subtitle">Serve to make a difference, Grow to lead the way.</p>
-    <img src="assets/img/hero-img3.jpeg" class="back-img">
+  </div>
+
+  <!-- Full-Screen Background Image -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+    <img src="assets/img/hero-img3.jpeg" alt="Hero Background" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(80%);">
   </div>
 
 </section>
 <!-- /Hero Section -->
+
 
 
     <!-- About Section -->
