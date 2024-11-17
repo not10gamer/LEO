@@ -2869,7 +2869,7 @@ body {
 }
 
 #hero {
-   background: url('..assets/img/hero-img.jpeg') center center / cover no-repeat, #333;
+   background: url('assets/img/hero-img4.jpeg') center center / cover no-repeat, #333;
   display: flex;
   align-items: center;
   justify-content: center;
