@@ -49,6 +49,11 @@
   
 
 <body class="index-page">
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+      <img src="assets/img/logo.png" alt="LEO Logo" id="splash-logo">
+  </div>
+
   <header id="header" class="header fixed-top">
 
     <div class="topbar d-flex align-items-center">
@@ -621,6 +626,25 @@ The LEO Club of EIC organizes community service, workshops, fundraising events, 
       const mainContent = document.getElementById("main-content");
     });
   </script>
+
+// Splash Screen Transition Logic
+
+  <script>
+    // Splash Screen Transition Logic
+    window.addEventListener('load', () => {
+        const splashScreen = document.getElementById('splash-screen');
+        setTimeout(() => {
+            splashScreen.style.opacity = 0;
+            splashScreen.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                splashScreen.style.display = 'none';
+            }, 500);
+        }, 2000); // Duration matches the animation (2 seconds)
+    });
+
+  </script>
+
+
 </body>
 
 </html>
