@@ -49,12 +49,6 @@
   
 
 <body class="index-page">
-  <!-- Splash Screen -->
-  <div id="logo-animation">
-    <div class="logo">
-      <img src="assets/img/logo.png" alt="LEO Club Logo">
-    </div>
-  </div>
   <header id="header" class="header fixed-top">
 
     <div class="topbar d-flex align-items-center">
@@ -625,20 +619,6 @@ The LEO Club of EIC organizes community service, workshops, fundraising events, 
     document.addEventListener("DOMContentLoaded", () => {
       const splashScreen = document.getElementById("splash-screen");
       const mainContent = document.getElementById("main-content");
-    });
-  </script>
-
-  <!-- Splash Screen-->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const splashScreen = document.getElementById("splash-screen");
-      const mainContent = document.getElementById("main-content");
-
-      // Remove splash screen after animation ends
-      setTimeout(() => {
-        splashScreen.classList.add("hidden");
-        mainContent.style.display = "block";  // Show the main content
-      }, 4000); // 3 seconds for splash screen + 1 second for fade-out
     });
   </script>
 </body>
