@@ -2920,14 +2920,22 @@ body {
   animation: scale-up 2s ease-in-out forwards;
 }
 
+/* Splash Screen Styles */
+#splash-logo {
+  width: 5000px; /* Start with a very large logo */
+  animation: scale-down 2s ease-in-out forwards;
+}
+
 /* Keyframe Animation */
-@keyframes scale-up {
+@keyframes scale-down {
   0% {
-      transform: scale(1);
+      transform: scale(50); /* Start very large */
   }
   100% {
-      transform: scale(50); /* Scale to fill the screen */
+      transform: scale(1); /* Scale down to normal size */
   }
 }
+
+
 
 
