@@ -2902,6 +2902,28 @@ body {
   z-index: 1; /* Keep overlay behind text */
 }
 
+/* Full-screen Instagram embed styles */
+.embed-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  overflow: hidden;
+}
+
+.embed-container .instagram-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
