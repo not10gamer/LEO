@@ -2925,6 +2925,53 @@ body {
   align-items: center;
 }
 
+/* Coming Soon Page Styles */
+#coming-soon {
+  background-color: #f8f9fa;  /* Light background */
+  height: 100vh;  /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#coming-soon h2 {
+  font-size: 3rem;
+  color: #4e73df;  /* Blue color to match your theme */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#coming-soon p {
+  font-size: 1.5rem;
+  color: #555;  /* Dark gray text */
+  font-weight: 400;
+}
+
+#coming-soon .btn {
+  background-color: #4e73df;  /* Blue button */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#coming-soon .btn:hover {
+  background-color: #2a5bdb;  /* Darker blue on hover */
+  transition: background-color 0.3s;
+}
+
+/* Centered container styling */
+.text-center {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 
 
 
