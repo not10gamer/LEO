@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>LEO Club of EIC: Upcoming Events</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JVSDT6D3W0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JVSDT6D3W0');
+</script>
+
+<body class="blog-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">leoclubofeic@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+94 76 622 9230</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://x.com/leoclubofeic" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://business.facebook.com/latest/home?nav_ref=bm_home_redirect&business_id=311915828131449&asset_id=131557346710962" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/leoclubofeic/" class="instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/logo.png" alt="">
+          <span>.</span>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class="active">Home<br></a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Projects</a></li>
+            <li><a href="galleries/gallery_page.html">Gallery</a></li>
+            <li class="dropdown"><a href="#"><span>EIC Leos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="galleries/full_team.html">Full Team</a></li>
+                <li><a href="History/club_logo.html">Club logo</a></li>
+                <li class="dropdown"><a href="#"><span>History</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="History/former_leaders.html">Former Leaders</a></li>
+                    <li><a href="History/club_awards.html">Club Awards</a></li>
+                    <li><a href="History/Source_of_Inspiration.html">Source of inspiration</a></li>
+                  </ul>
+                  <li><a href="EventCalander.html">Event Calander</a></li>
+              </ul>
+            </li>
+           
+            <li><a href="blog.html">Newsletter</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+<body>
+  <h1>LEO Dash</h1>
+  <canvas id="gameCanvas" width="800" height="300"></canvas>
+  <button id="replayButton" style="display: none;" onclick="startGame()">Replay</button>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let character, groundHeight, obstacles, score, gameSpeed, gameOver, obstacleFrequency, obstacleTimer;
+
+    function startGame() {
+      character = { x: 50, y: 250, width: 50, height: 50, dy: 0, jumping: false };
+      groundHeight = 50;
+      obstacles = [];
+      score = 0;
+      gameSpeed = 3; // Start with a slower speed
+      obstacleFrequency = 100; // Start with a higher frequency (lower number means less frequent)
+      obstacleTimer = 0;
+      gameOver = false;
+      document.getElementById('replayButton').style.display = 'none';
+      update();
+    }
+
+    function update() {
+      if (gameOver) {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#fff';
+        ctx.font = '30px Arial';
+        ctx.fillText('Game Over! Score: ' + score, canvas.width / 2 - 120, canvas.height / 2);
+        document.getElementById('replayButton').style.display = 'block';
+        return;
+      }
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      drawBackground();
+      drawGround();
+      drawCharacter();
+      drawObstacles();
+      detectCollision();
+
+      character.y += character.dy;
+      character.dy += 0.6; // Gravity
+
+      if (character.y + character.height >= canvas.height - groundHeight) {
+        character.y = canvas.height - groundHeight - character.height;
+        character.jumping = false;
+      }
+
+      if (obstacleTimer > obstacleFrequency) {
+        createObstacle();
+        obstacleTimer = 0;
+      } else {
+        obstacleTimer++;
+      }
+
+      ctx.fillStyle = '#000';
+      ctx.font = '20px Arial';
+      ctx.fillText('Score: ' + score, 10, 30);
+
+      // Increase difficulty as score increases
+      if (score % 10 === 0 && score !== 0) {
+        gameSpeed += 0.03; // Increase speed more gradually
+        obstacleFrequency = Math.max(40, obstacleFrequency - 2); // Decrease frequency more gradually but not below 50
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    function drawBackground() {
+      // Draw sky
+      const skyGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      skyGradient.addColorStop(0, '#87CEEB'); // Light blue
+      skyGradient.addColorStop(1, '#FFFFFF'); // White
+      ctx.fillStyle = skyGradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Draw sun
+      ctx.beginPath();
+      ctx.arc(700, 80, 40, 0, Math.PI * 2, true);
+      ctx.fillStyle = '#FFD700'; // Sun color
+      ctx.fill();
+
+      // Draw clouds
+      drawCloud(150, 80, 60);
+      drawCloud(300, 50, 40);
+      drawCloud(500, 100, 50);
+
+      // Draw birds
+      drawBird(200, 150);
+      drawBird(400, 120);
+      drawBird(600, 180);
+    }
+
+    function drawCloud(x, y, size) {
+      ctx.fillStyle = '#FFFFFF';
+      ctx.beginPath();
+      ctx.arc(x, y, size, Math.PI * 0.5, Math.PI * 1.5);
+      ctx.arc(x + size, y - size, size, Math.PI * 1, Math.PI * 1.85);
+      ctx.arc(x + size * 2, y - size, size, Math.PI * 1.15, Math.PI * 2);
+      ctx.arc(x + size * 3, y, size, Math.PI * 1.5, Math.PI * 0.5);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    function drawBird(x, y) {
+      ctx.fillStyle = '#000000';
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(x + 10, y - 10);
+      ctx.lineTo(x + 20, y);
+      ctx.stroke();
+    }
+
+    function drawCharacter() {
+      // Draw character body
+      ctx.fillStyle = '#008080'; // Teal color for the character
+      ctx.fillRect(character.x, character.y, character.width, character.height);
+    }
+
+    function drawGround() {
+      ctx.fillStyle = '#228B22'; // Forest green for grass
+      ctx.fillRect(0, canvas.height - groundHeight, canvas.width, groundHeight);
+    }
+
+    function createObstacle() {
+      let obstacleHeight = Math.random() * 20 + 20; // Less tall obstacles
+      obstacles.push({
+        x: canvas.width,
+        y: canvas.height - groundHeight - obstacleHeight,
+        width: 20,
+        height: obstacleHeight
+      });
+    }
+
+    function drawObstacles() {
+      ctx.fillStyle = '#ff5555';
+      obstacles.forEach(obstacle => {
+        ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+        obstacle.x -= gameSpeed;
+      });
+
+      if (obstacles.length > 0 && obstacles[0].x + obstacles[0].width < 0) {
+        obstacles.shift();
+        score++;
+      }
+    }
+
+    function detectCollision() {
+      for (let obstacle of obstacles) {
+        if (
+          character.x < obstacle.x + obstacle.width &&
+          character.x + character.width > obstacle.x &&
+          character.y < obstacle.y + obstacle.height &&
+          character.y + character.height > obstacle.y
+        ) {
+          gameOver = true;
+        }
+      }
+    }
+
+    function jump() {
+      if (!character.jumping) {
+        character.dy = -12.5; // Decrease the jump height
+        character.jumping = true;
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        jump();
+      }
+    });
+
+    startGame();
+  </script>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">LEO of EIC</span>
+          </a>
+          <p>LEO Club: Empowering young leaders to serve their communities, grow through meaningful experiences, and create lasting positive change.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/leoclubofeic" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://business.facebook.com/latest/home?nav_ref=bm_home_redirect&business_id=311915828131449&asset_id=131557346710962" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/leoclubofeic/" class="instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Other Links</h4>
+          <ul>
+            <li><a href="https://www.lionsclubs.org/en">Lions Club</a></li>
+            <li><a href="https://www.lionsclubs.org/en/discover-our-clubs/about-leos">About Leo</a></li>
+            <li><a href="https://leomd306.org">LEO Club of 306</a></li>
+            <li><a href="https://leomd306.org/a2.html">LEO Club of 306 A2</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>51 Flower Road</p>
+          <p>Colombo, 00500</p>
+          <p>Sri Lanka</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+94 76 622 9230</span></p>
+          <p><strong>Email:</strong> <span>leoclubofeic@gmail.com</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">LEO of EIC</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only and only after you have spoken to the creator of the website. -->
+        Designed by <a href="https://github.com/not10gamer">Ethan Peter</a> and <a>Rehan Perera</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
