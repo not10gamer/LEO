@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>LEO Club of EIC: Upcoming Events</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>LEO Club of EIC</title>
+  <meta name="description" content="The official website of the LEO Club of Ethos International College">
+  <meta name="keywords" content="LEO Club, Ethos International College, community service, leadership, inspiration">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -46,7 +46,9 @@
   gtag('config', 'G-JVSDT6D3W0');
 </script>
 
-<body class="blog-page">
+  
+
+<body class="index-page">
 
   <header id="header" class="header fixed-top">
 
@@ -65,7 +67,6 @@
     </div><!-- End Top Bar -->
 
     <div class="branding d-flex align-items-cente">
-
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -75,23 +76,23 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html#hero" class="active">Home<br></a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#portfolio">Projects</a></li>
+            <li><a href="#hero" class="active">Home<br></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Projects</a></li>
             <li><a href="galleries/gallery_page.html">Gallery</a></li>
             <li class="dropdown"><a href="#"><span>EIC Leos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="index.html#team">Team</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="galleries/full_team.html">Full Team</a></li>
                 <li><a href="History/club_logo.html">Club logo</a></li>
+                <li><a href="EventCalander.html">Event Calander</a></li>
                 <li class="dropdown"><a href="#"><span>History</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="History/former_leaders.html">Former Leaders</a></li>
                     <li><a href="History/club_awards.html">Club Awards</a></li>
                     <li><a href="History/Source_of_Inspiration.html">Source of inspiration</a></li>
                   </ul>
-                  <li><a href="EventCalander.html">Event Calander</a></li>
               </ul>
             </li>
            
@@ -171,7 +172,7 @@
       // Increase difficulty as score increases
       if (score % 10 === 0 && score !== 0) {
         gameSpeed += 0.03; // Increase speed more gradually
-        obstacleFrequency = Math.max(40, obstacleFrequency - 2); // Decrease frequency more gradually but not below 50
+        obstacleFrequency = Math.max(40, obstacleFrequency - 2); // Decrease frequency more gradually but not below 40
       }
 
       requestAnimationFrame(update);
@@ -271,7 +272,7 @@
 
     function jump() {
       if (!character.jumping) {
-        character.dy = -12.5; // Decrease the jump height
+        character.dy = -10; // Decrease the jump height (was -15)
         character.jumping = true;
       }
     }
@@ -280,6 +281,10 @@
       if (e.code === 'Space') {
         jump();
       }
+    });
+
+    canvas.addEventListener('touchstart', (e) => {
+      jump();
     });
 
     startGame();
