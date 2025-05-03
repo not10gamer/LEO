@@ -50,6 +50,14 @@
 
 <body class="index-page">
 
+  <div id="fireworksScreen">
+    <canvas id="fireworksCanvas"></canvas>
+    <div id="finalText">
+      All projects for the Leoistic year 2024/2025 have ended 🎉
+      <div id="subText">Tap the screen to play fireworks!</div>
+    </div>
+  </div>
+
   <header id="header" class="header fixed-top">
 
     <div class="topbar d-flex align-items-center">
@@ -749,6 +757,89 @@ The LEO Club of EIC organizes community service, workshops, fundraising events, 
       const splashScreen = document.getElementById("splash-screen");
       const mainContent = document.getElementById("main-content");
     });
+  </script>
+
+  <script>
+  const canvas = document.getElementById('fireworksCanvas');
+  const ctx = canvas.getContext('2d');
+  let fireworks = [];
+  
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  
+  class Particle {
+    constructor(x, y, color) {
+      this.x = x;
+      this.y = y;
+      this.radius = Math.random() * 2 + 1;
+      this.color = color;
+      this.speed = Math.random() * 5 + 2;
+      this.angle = Math.random() * 2 * Math.PI;
+      this.friction = 0.98;
+      this.gravity = 0.1;
+      this.alpha = 1;
+    }
+  
+    update() {
+      this.speed *= this.friction;
+      this.x += Math.cos(this.angle) * this.speed;
+      this.y += Math.sin(this.angle) * this.speed + this.gravity;
+      this.alpha -= 0.01;
+    }
+  
+    draw() {
+      ctx.save();
+      ctx.globalAlpha = this.alpha;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+  
+  function createFirework(x, y) {
+    const colors = ['#ff0040', '#ff8000', '#ffff00', '#00ff00', '#00bfff', '#ff00ff'];
+    for (let i = 0; i < 50; i++) {
+      fireworks.push(new Particle(x, y, colors[Math.floor(Math.random() * colors.length)]));
+    }
+  }
+  
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+    fireworks.forEach((p, i) => {
+      p.update();
+      p.draw();
+      if (p.alpha <= 0) {
+        fireworks.splice(i, 1);
+      }
+    });
+  
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+  
+  // Auto fireworks forever
+  setInterval(() => {
+    createFirework(Math.random() * canvas.width, Math.random() * canvas.height / 2);
+  }, 1000);
+  
+  // Optional: Fireworks on click
+  canvas.addEventListener('click', (e) => {
+    createFirework(e.clientX, e.clientY);
+  });
+
+  // After 5 seconds, remove the entire fireworks screen
+  setTimeout(() => {
+    document.getElementById('fireworksScreen').style.display = 'none';
+  }, 10000);
+
   </script>
 
 
